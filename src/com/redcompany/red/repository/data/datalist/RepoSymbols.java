@@ -1,7 +1,8 @@
-package com.redcompany.red.repository.data;
+package com.redcompany.red.repository.data.datalist;
 
 import com.redcompany.red.objects.Symbol;
 import com.redcompany.red.repository.actions.write.IRepoActionWrite;
+import com.redcompany.red.repository.data.Repo;
 
 import java.util.ArrayList;
 

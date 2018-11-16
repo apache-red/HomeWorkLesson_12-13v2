@@ -1,23 +1,29 @@
 package com.redcompany.red.objects;
 
+import com.redcompany.red.repository.data.datalist.RepoWord;
+
+import java.util.ArrayList;
+
 public class Word {
 
-    private String word="";
 
     private Symbol symbol;
+    private RepoWord repoWord;
 
-
-
-    public void constractionWord(Symbol symbol){
-        this.word = word+ symbol.getSymbol();
+    public Word() {
+        this.repoWord = new RepoWord();
     }
 
-    public String getWord() {
-        return word;
+    public void addSymbolToWord(Symbol symbol) {
+        repoWord.addSymbolToWord(symbol);
     }
 
-    public void setWord(String word) {
-        word = word;
+    public RepoWord getRepoWord() {
+        return repoWord;
+    }
+
+    public void setRepoWord(RepoWord repoWord) {
+        this.repoWord = repoWord;
     }
 
     public Symbol getSymbol() {

@@ -2,7 +2,7 @@ package com.redcompany.red.fileswork.actions.show;
 
 import com.redcompany.red.fileswork.actions.read.IFileRead;
 import com.redcompany.red.fileswork.actions.show.console.IFileConsoleShow;
-import com.redcompany.red.repository.data.RepoSymbols;
+import com.redcompany.red.repository.data.datalist.RepoSymbols;
 
 public class ShowDataFromFile  {
 

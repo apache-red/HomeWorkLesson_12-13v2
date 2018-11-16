@@ -1,27 +1,23 @@
 package com.redcompany.red.textwork.parsing;
 
-import com.redcompany.red.objects.Symbol;
 import com.redcompany.red.objects.Word;
-import com.redcompany.red.repository.actions.write.IRepoActionWrite;
-import com.redcompany.red.repository.data.RepoSymbols;
-import com.redcompany.red.repository.data.RepoWord;
-
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.redcompany.red.repository.data.datalist.RepoSymbols;
+import com.redcompany.red.repository.data.datalist.RepoWord;
+import com.redcompany.red.repository.data.dataobjects.RepoWordList;
 
 public class TextParsing  {
 
     String validationWord = "аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯ0123456789";
     String validationSentence = ",-:";
 
+    private RepoWordList repoWordList;
     private RepoWord repoWord;
     private Word word;
 
 
 
     public TextParsing() {
-        this.repoWord = new RepoWord();
+        this.repoWordList = new RepoWordList();
 
     }
 
@@ -31,25 +27,28 @@ public class TextParsing  {
     public void parsingWord(RepoSymbols repoSymbols) {
 
         this.word = new Word();
-        System.out.println();
         for (int i = 0; i < repoSymbols.getSymbolsListRepo().size(); i++) {
 
             if (validationWord.indexOf(repoSymbols.getSymbolsListRepo().get(i).getSymbol()) != -1) {
 
-            word.constractionWord(repoSymbols.getSymbolsListRepo().get(i));
+            word.addSymbolToWord(repoSymbols.getSymbolsListRepo().get(i));
             } else {
                // if()
 
-                repoWord.addDataToRepo(word);
+                repoWordList.addDataToRepo(repoWord = word.getRepoWord());
+
                 this.word = new Word();
-                i++;
-            }
+                      }
 
         }
+        System.out.println("Word count equals= "+repoWordList.getWordsListRepo().size());
+        for (int i = 0; i < repoWordList.getWordsListRepo().size() ; i++) {
 
-        for (int i = 0; i < repoWord.getWordsListRepo().size() ; i++) {
 
-            System.out.println(repoWord.getWordsListRepo().get(i).getWord());
+            for (int j = 0; j < repoWordList.getWordsListRepo().get(i).getWord().size(); j++) {
+                System.out.print(repoWordList.getWordsListRepo().get(i).getWord().get(j).getSymbol());
+            }
+            System.out.print(" ");
         }
     }
 

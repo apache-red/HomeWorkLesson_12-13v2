@@ -1,4 +1,6 @@
-package com.redcompany.red.repository.data;
+package com.redcompany.red.repository.data.dataobjects;
+
+import com.redcompany.red.repository.data.Repo;
 
 import java.util.ArrayList;
 

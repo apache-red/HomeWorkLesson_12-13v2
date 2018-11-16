@@ -5,8 +5,8 @@ import com.redcompany.red.fileswork.actions.read.ReadFile;
 import com.redcompany.red.fileswork.actions.show.ShowDataFromFile;
 import com.redcompany.red.fileswork.actions.show.console.IFileConsoleShow;
 import com.redcompany.red.fileswork.actions.show.console.ShowFileConsole;
-import com.redcompany.red.repository.data.RepoList;
-import com.redcompany.red.repository.data.RepoSymbols;
+import com.redcompany.red.repository.data.dataobjects.RepoList;
+import com.redcompany.red.repository.data.datalist.RepoSymbols;
 import com.redcompany.red.textwork.parsing.TextParsing;
 
 import java.util.InputMismatchException;

@@ -2,13 +2,12 @@ package com.redcompany.red.fileswork.actions.read;
 
 import com.redcompany.red.fileswork.actions.copy.tolist.IFileCopyToList;
 import com.redcompany.red.objects.Symbol;
-import com.redcompany.red.repository.data.RepoSymbols;
+import com.redcompany.red.repository.data.datalist.RepoSymbols;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class ReadFile implements IFileRead, IFileCopyToList {
 
