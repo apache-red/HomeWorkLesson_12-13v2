@@ -31,6 +31,7 @@ public class Menu {
     }
 
     private void showMainMenu() {
+        System.out.println();
         System.out.println("Select an action. Enter the number 1....");
         System.out.println("1. Initialize the input file (Mandatory initial action) (WORKS!!!)");
         System.out.println("2. Split input file into parts (WORKS!!!)");
@@ -47,7 +48,7 @@ public class Menu {
                 initFile();
                 break;
             case 2:
-        textParsing.parsingWord((RepoSymbols) repoList.getRepoList().get(0));
+        textParsing.parsing((RepoSymbols) repoList.getRepoList().get(0));
 
                 break;
             case 4:

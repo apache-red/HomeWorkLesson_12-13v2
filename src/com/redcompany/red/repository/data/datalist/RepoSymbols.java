@@ -11,9 +11,6 @@ public class RepoSymbols extends Repo implements IRepoActionWrite {
     private ArrayList<Symbol> symbolsListRepo = new ArrayList<Symbol>();
 
 
-    public RepoSymbols() {
-
-    }
 
     @Override
     public void addDataToRepo(Symbol symbol) {

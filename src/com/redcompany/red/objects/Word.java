@@ -15,7 +15,7 @@ public class Word {
     }
 
     public void addSymbolToWord(Symbol symbol) {
-        repoWord.addSymbolToWord(symbol);
+        repoWord.addDataToRepo(symbol);
     }
 
     public RepoWord getRepoWord() {
