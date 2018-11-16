@@ -51,4 +51,7 @@ public class ReadFile implements IFileRead, IFileCopyToList {
     }
 
 
+    public RepoSymbols getRepoSymbols() {
+        return repoSymbols;
+    }
 }

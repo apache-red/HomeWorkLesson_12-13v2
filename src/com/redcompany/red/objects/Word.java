@@ -2,14 +2,14 @@ package com.redcompany.red.objects;
 
 public class Word {
 
-    private String word;
+    private String word="";
 
     private Symbol symbol;
 
 
 
     public void constractionWord(Symbol symbol){
-        this.word = word + symbol;
+        this.word = word+ symbol.getSymbol();
     }
 
     public String getWord() {

@@ -5,9 +5,14 @@ import com.redcompany.red.repository.actions.write.IRepoActionWrite;
 
 import java.util.ArrayList;
 
-public class RepoSymbols  implements IRepoActionWrite {
+public class RepoSymbols extends Repo implements IRepoActionWrite {
 
     private ArrayList<Symbol> symbolsListRepo = new ArrayList<Symbol>();
+
+
+    public RepoSymbols() {
+
+    }
 
     @Override
     public void addDataToRepo(Symbol symbol) {

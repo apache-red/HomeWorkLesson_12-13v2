@@ -5,7 +5,7 @@ import com.redcompany.red.objects.Word;
 
 import java.util.ArrayList;
 
-public class RepoWord {
+public class RepoWord extends Repo {
 
 
 
@@ -29,4 +29,6 @@ public class RepoWord {
     public void setWordsListRepo(ArrayList<Word> wordsListRepo) {
         this.wordsListRepo = wordsListRepo;
     }
+
+
 }

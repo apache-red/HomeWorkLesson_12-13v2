@@ -5,6 +5,7 @@ import com.redcompany.red.fileswork.actions.read.ReadFile;
 import com.redcompany.red.fileswork.actions.show.ShowDataFromFile;
 import com.redcompany.red.fileswork.actions.show.console.IFileConsoleShow;
 import com.redcompany.red.fileswork.actions.show.console.ShowFileConsole;
+import com.redcompany.red.repository.data.RepoList;
 import com.redcompany.red.repository.data.RepoSymbols;
 import com.redcompany.red.textwork.parsing.TextParsing;
 
@@ -14,10 +15,12 @@ import java.util.Scanner;
 public class Menu {
     private TextParsing textParsing;
     private RepoSymbols repoSymbols;
+    private RepoList repoList;
 
 
     public Menu() {
         this.textParsing = new TextParsing();
+        this.repoList = new RepoList();
     }
 
     public void start() {
@@ -44,7 +47,8 @@ public class Menu {
                 initFile();
                 break;
             case 2:
-        textParsing.parsingWord(repoSymbols);
+        textParsing.parsingWord((RepoSymbols) repoList.getRepoList().get(0));
+
                 break;
             case 4:
 
@@ -83,6 +87,8 @@ public class Menu {
         IFileConsoleShow iFileConsoleShow = new ShowFileConsole();
         ShowDataFromFile showDataFromFile = new ShowDataFromFile(iFileRead, iFileConsoleShow);
         showDataFromFile.showDataFromFile();
+        repoList.addDataToRepo(iFileRead.getSymbolList());
+
 
     }
 
