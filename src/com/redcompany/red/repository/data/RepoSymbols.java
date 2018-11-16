@@ -4,7 +4,6 @@ import com.redcompany.red.objects.Symbol;
 import com.redcompany.red.repository.actions.write.IRepoActionWrite;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class RepoSymbols  implements IRepoActionWrite {
 
@@ -22,6 +21,7 @@ public class RepoSymbols  implements IRepoActionWrite {
     public void setSymbolsListRepo(ArrayList<Symbol> symbolsListRepo) {
         this.symbolsListRepo = symbolsListRepo;
     }
+
 
 
 }
